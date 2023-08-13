@@ -1,0 +1,124 @@
+### Register User API
+POST http://localhost:8000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "khannedy",
+    "password": "rahasia",
+    "name": "Eko Kurniawan Khannedy"
+}
+
+### Login User API
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "khannedy",
+    "password": "rahasia"
+}
+
+### Get Current User API
+GET http://localhost:8000/api/users/current
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Update Current User API
+PATCH http://localhost:8000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+{
+    "name" : "Eko Khannedy"
+}
+
+### Logout User API
+DELETE http://localhost:8000/api/users/logout
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+{
+    "first_name" : "Hendri",
+    "last_name" : "Karisma",
+    "email" : "joko@pzn.com",
+    "phone" : "324234324"
+}
+
+### GEt Contact API #249
+GET http://localhost:8000/api/contacts/249
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Update Contact API #249
+PUT http://localhost:8000/api/contacts/249
+Accept: application/json
+Content-Type: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+{
+    "first_name" : "Budi",
+    "last_name" : "Morro",
+    "email" : "joko@pzn.com",
+    "phone" : "324234324"
+}
+
+### Delete Contact API #249
+DELETE http://localhost:8000/api/contacts/249
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Search Contact API
+GET http://localhost:8000/api/contacts?email=joko
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Create Address API #250
+POST http://localhost:8000/api/contacts/250/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+{
+    "street": "jalan belum ada 2",
+    "city" : "jakarta",
+    "province": "dki jakarta",
+    "country": "indonesia",
+    "postal_code": "324234"
+}
+
+### Get Address API #25
+GET http://localhost:8000/api/contacts/250/addresses/25
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### Update Address API #25
+PUT http://localhost:8000/api/contacts/250/addresses/25
+Accept: application/json
+Content-Type: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+{
+    "street": "jalan melati",
+    "city" : "jakarta",
+    "province": "dki jakarta",
+    "country": "indonesia",
+    "postal_code": "324234"
+}
+
+### Remove Address API #24
+DELETE http://localhost:8000/api/contacts/250/addresses/24
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
+
+### List Address API
+GET http://localhost:8000/api/contacts/250/addresses
+Accept: application/json
+Authorization: 13dae49c-9464-4e54-9761-112a92343c81
