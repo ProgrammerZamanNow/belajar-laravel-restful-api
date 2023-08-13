@@ -94,6 +94,16 @@
             },
             "get": {
                 "description": "Get list addresses",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header"
+                    },
+                    {
+                        "name": "idContact",
+                        "in": "path"
+                    }
+                ],
                 "responses": {
                     "200" : {
                         "description": "List addresses",
